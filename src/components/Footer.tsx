@@ -1,12 +1,14 @@
 'use client'
 
 import { Heart, Code, Coffee } from 'lucide-react'
+import { useLanguage } from '@/lib/LanguageContext'
 
 const Footer = () => {
+  const { t } = useLanguage()
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="py-12 px-6 border-t border-white/10">
+    <footer className="py-12 px-6 border-t border-gray-600/20">
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
           {/* Logo */}
@@ -17,34 +19,33 @@ const Footer = () => {
           </div>
           
           {/* Description */}
-          <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-            Desenvolvedor Web Full Stack apaixonado por criar experiências digitais incríveis. 
-            Sempre em busca de novas tecnologias e desafios.
+          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            {t.footer.description}
           </p>
           
           {/* Quick Links */}
           <div className="flex justify-center space-x-8 mb-8 text-sm">
-            <a href="#about" className="text-gray-400 hover:text-white transition-colors">
-              Sobre
+            <a href="#about" className="text-gray-300 hover:text-primary-400 transition-colors">
+              {t.nav.about}
             </a>
-            <a href="#skills" className="text-gray-400 hover:text-white transition-colors">
-              Skills
+            <a href="#skills" className="text-gray-300 hover:text-primary-400 transition-colors">
+              {t.nav.skills}
             </a>
-            <a href="#projects" className="text-gray-400 hover:text-white transition-colors">
-              Projetos
+            <a href="#projects" className="text-gray-300 hover:text-primary-400 transition-colors">
+              {t.nav.projects}
             </a>
-            <a href="#contact" className="text-gray-400 hover:text-white transition-colors">
-              Contato
+            <a href="#contact" className="text-gray-300 hover:text-primary-400 transition-colors">
+              {t.nav.contact}
             </a>
           </div>
           
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mb-8">
             <a
-              href="https://github.com/alejandromartins"
+              href="https://github.com/803Dyse"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/20 transition-all duration-300"
+              className="w-10 h-10 rounded-full bg-dark-800/60 flex items-center justify-center text-gray-300 hover:text-primary-400 hover:bg-primary-500/20 transition-all duration-300 border border-dark-600/30 hover:border-primary-500/50"
               aria-label="GitHub"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -56,7 +57,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/alejandro-martins"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/20 transition-all duration-300"
+              className="w-10 h-10 rounded-full bg-dark-800/60 flex items-center justify-center text-gray-300 hover:text-secondary-400 hover:bg-secondary-500/20 transition-all duration-300 border border-dark-600/30 hover:border-secondary-500/50"
               aria-label="LinkedIn"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -66,7 +67,7 @@ const Footer = () => {
             
             <a
               href="mailto:dysedev@gmail.com"
-              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/20 transition-all duration-300"
+              className="w-10 h-10 rounded-full bg-dark-800/60 flex items-center justify-center text-gray-300 hover:text-primary-400 hover:bg-primary-500/20 transition-all duration-300 border border-dark-600/30 hover:border-primary-500/50"
               aria-label="Email"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -76,16 +77,16 @@ const Footer = () => {
           </div>
           
           {/* Copyright */}
-          <div className="pt-8 border-t border-white/10">
-            <div className="flex items-center justify-center text-gray-400 text-sm">
-              <span>© {currentYear} Alejandro Martins</span>
+          <div className="pt-8 border-t border-gray-600/20">
+            <div className="flex items-center justify-center text-gray-300 text-sm">
+              <span>© {currentYear} Alex Martins</span>
               <span className="mx-2">•</span>
               <span className="flex items-center">
-                Feito com <Heart className="w-4 h-4 mx-1 text-red-400" /> e <Code className="w-4 h-4 mx-1 text-blue-400" />
+                {t.footer.madeWith} <Heart className="w-4 h-4 mx-1 text-primary-400" /> e <Code className="w-4 h-4 mx-1 text-secondary-400" />
               </span>
               <span className="mx-2">•</span>
               <span className="flex items-center">
-                Alimentado por <Coffee className="w-4 h-4 ml-1 text-yellow-400" />
+                {t.footer.poweredBy} <Coffee className="w-4 h-4 ml-1 text-primary-300" />
               </span>
             </div>
           </div>

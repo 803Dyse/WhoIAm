@@ -1,24 +1,27 @@
 'use client'
 
 import { MapPin, Heart, GraduationCap, Star } from 'lucide-react'
+import { useLanguage } from '@/lib/LanguageContext'
 
 const AboutSection = () => {
+  const { t } = useLanguage()
+
   const personalInfo = [
     {
-      icon: <MapPin className="w-5 h-5 text-blue-400" />,
-      text: "Galicia, España"
+      icon: <MapPin className="w-5 h-5 text-secondary-400" />,
+      text: t.about.location
     },
     {
-      icon: <Heart className="w-5 h-5 text-purple-400" />,
-      text: "IA Generativa & LLMs"
+      icon: <Heart className="w-5 h-5 text-primary-400" />,
+      text: t.about.interests
     },
     {
-      icon: <GraduationCap className="w-5 h-5 text-cyan-400" />,
-      text: "Graduado em 2024"
+      icon: <GraduationCap className="w-5 h-5 text-secondary-300" />,
+      text: t.about.graduated
     },
     {
-      icon: <Star className="w-5 h-5 text-yellow-400" />,
-      text: "Aprender sempre, se atualizar"
+      icon: <Star className="w-5 h-5 text-primary-300" />,
+      text: t.about.passion
     }
   ]
 
@@ -28,32 +31,27 @@ const AboutSection = () => {
         {/* Text Content */}
         <div className="animate-fade-in">
           <h2 className="text-4xl font-bold mb-8">
-            <span className="gradient-text">Sobre Mim</span>
+            <span className="gradient-text">{t.about.title}</span>
           </h2>
           
-          <p className="text-gray-300 mb-6 leading-relaxed">
-            Sou web developer, amo transformar ideias em realidade com o poder da programação. 
-            Sou recém-formado (2024) e gosto muito de aprender coisas novas e tecnologias novas, 
-            estudando IA Generativa e LLMs ultimamente.
+          <p className="text-gray-200 mb-6 leading-relaxed">
+            {t.about.description1}
           </p>
           
-          <p className="text-gray-300 mb-8 leading-relaxed">
-            Minha jornada começou na administração de redes, mas ao descobrir o desenvolvimento web, 
-            foi paixão à primeira vista. Desde então, é o que mais gosto de fazer e me gera entusiasmo 
-            poder aprender e aplicar novos conceitos e metodologias.
+          <p className="text-gray-200 mb-8 leading-relaxed">
+            {t.about.description2}
           </p>
           
-          <p className="text-gray-300 mb-8 leading-relaxed">
-            Tenho um perfil sociável e sou aberto a novas ideias. Aprender e absorver coisas boas 
-            sempre será minha base fundamental para prosperar e progredir como profissional.
+          <p className="text-gray-200 mb-8 leading-relaxed">
+            {t.about.description3}
           </p>
           
           {/* Personal Info Grid */}
           <div className="grid sm:grid-cols-2 gap-4">
             {personalInfo.map((info, index) => (
-              <div key={index} className="flex items-center space-x-3">
+              <div key={index} className="flex items-center space-x-3 p-3 rounded-lg bg-dark-800/50 hover:bg-dark-800/70 transition-colors">
                 {info.icon}
-                <span className="text-gray-300">{info.text}</span>
+                <span className="text-gray-200">{info.text}</span>
               </div>
             ))}
           </div>
@@ -61,19 +59,19 @@ const AboutSection = () => {
         
         {/* Visual Content */}
         <div className="relative animate-slide-up">
-          <div className="glass-card p-8 h-96 flex items-center justify-center hover-scale">
+          <div className="glass-card p-8 h-96 flex items-center justify-center hover-scale card-hover">
             <div className="text-center">
-              <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 flex items-center justify-center text-2xl font-bold text-black">
+              <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-r from-primary-400 via-secondary-500 to-primary-500 flex items-center justify-center text-2xl font-bold text-white shadow-lg shadow-primary-500/20">
                 AM
               </div>
               <h3 className="text-xl font-semibold mb-4 gradient-text">
-                Multilíngue
+                {t.about.polyglot}
               </h3>
-              <p className="text-gray-300 mb-4">
-                Português • Inglês • Español • Galego
+              <p className="text-gray-200 mb-4">
+                {t.about.languages}
               </p>
-              <div className="text-sm text-gray-400">
-                Metade espanhol e metade brasileiro
+              <div className="text-sm text-gray-300">
+                {t.about.nationality}
               </div>
             </div>
           </div>

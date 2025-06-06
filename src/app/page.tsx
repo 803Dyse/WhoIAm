@@ -9,6 +9,7 @@ import ProjectsSection from '@/components/ProjectsSection'
 import EducationSection from '@/components/EducationSection'
 import ContactSection from '@/components/ContactSection'
 import Footer from '@/components/Footer'
+import ClientOnly from '@/components/ClientOnly'
 
 export default function HomePage() {
   const [activeSection, setActiveSection] = useState('hero')
@@ -51,26 +52,38 @@ export default function HomePage() {
     }
   }
 
-  return (
-    <div className="min-h-screen bg-black text-white overflow-x-hidden">
-      {/* Navigation */}
-      <Navigation 
-        activeSection={activeSection} 
-        scrollToSection={scrollToSection} 
-      />
-      
-      {/* Main Content */}
-      <main>
-        <HeroSection scrollToSection={scrollToSection} />
-        <AboutSection />
-        <SkillsSection />
-        <ProjectsSection />
-        <EducationSection />
-        <ContactSection />
-      </main>
-      
-      {/* Footer */}
-      <Footer />
+  // Loading fallback component
+  const LoadingFallback = () => (
+    <div className="min-h-screen bg-black text-white flex items-center justify-center">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500 mx-auto mb-4"></div>
+        <p className="text-gray-400">Loading...</p>
+      </div>
     </div>
+  )
+
+  return (
+    <ClientOnly fallback={<LoadingFallback />}>
+      <div className="min-h-screen bg-black text-white overflow-x-hidden">
+        {/* Navigation */}
+        <Navigation 
+          activeSection={activeSection} 
+          scrollToSection={scrollToSection} 
+        />
+        
+        {/* Main Content */}
+        <main>
+          <HeroSection scrollToSection={scrollToSection} />
+          <AboutSection />
+          <SkillsSection />
+          <ProjectsSection />
+          <EducationSection />
+          <ContactSection />
+        </main>
+        
+        {/* Footer */}
+        <Footer />
+      </div>
+    </ClientOnly>
   )
 }
