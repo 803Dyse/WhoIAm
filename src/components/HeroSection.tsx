@@ -1,6 +1,7 @@
 'use client'
 
 import { ChevronDown } from 'lucide-react'
+import Image from 'next/image'
 import { useLanguage } from '@/lib/LanguageContext'
 
 interface HeroSectionProps {
@@ -17,9 +18,15 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
       
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6 animate-fade-in">
-        {/* Avatar */}
-        <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-r from-primary-400 via-secondary-500 to-primary-500 flex items-center justify-center text-4xl font-bold text-white animate-pulse-slow shadow-lg shadow-primary-500/30">
-          AM
+        {/* Avatar - Profile Image */}
+        <div className="w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden shadow-lg shadow-primary-500/30 ring-4 ring-primary-500/30 animate-pulse-slow">
+          <Image
+            src="/images/profile/ProfileIcon.jpg"
+            alt="Profile"
+            width={128}
+            height={128}
+            className="w-full h-full object-cover"
+          />
         </div>
         
         {/* Name */}

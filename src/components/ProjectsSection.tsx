@@ -12,28 +12,28 @@ const ProjectsSection = () => {
       title: "Tacebook",
       description: t.projects.tacebook.description,
       tech: ["Java", "Java Swing", "SQLite", "JavaFX", "MySQL Workbench"],
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&crop=entropy&auto=format",
+      image: "/images/projects/Tacebook.png",
       github: "https://github.com/devparada/Tacebook",
     },
     {
       title: "HangMan",
       description: t.projects.hangman.description,
       tech: ["Java", "Java Swing", "SQLite", "JavaFX", "MySQL Workbench"],
-      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop&crop=entropy&auto=format",
+      image: "/images/projects/HangMan.png",
       github: "https://github.com/803Dyse/Ahorcado",
     },
     {
       title: "OBraseiro",
       description: t.projects.obraseiro.description,
       tech: ["PHP", "JavaScript", "MariaDB", "Symphony", "CodeIgniter 4", "Tailwind CSS", "PhpMyAdmin"],
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop&crop=entropy&auto=format",
+      image: "/images/projects/O_BraseiroSource.png",
       github: "https://github.com/803Dyse/OBraseiro",
     },
     {
       title: "Teistris",
       description: t.projects.teistris.description,
       tech: ["Java", "Java Swing", "SQLite"],
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop&crop=entropy&auto=format",
+      image: "/images/projects/Tetrist.png",
       github: "https://github.com/devparada/Teistris",
     }
   ];
