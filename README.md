@@ -87,4 +87,4 @@ O projeto está otimizado para deploy em plataformas como:
 
 ---
 
-© 2024 Alejandro Martins - Desenvolvedor Web Full Stack
+© 2025 Alejandro Martins - Desenvolvedor Web Full Stack
