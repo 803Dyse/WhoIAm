@@ -10,8 +10,8 @@ const ContactSection = () => {
     {
       icon: <Mail className="w-5 h-5" />,
       label: "Email",
-      value: "dysedev@gmail.com",
-      href: "mailto:dysedev@gmail.com",
+      value: "devdyse@gmail.com",
+      href: "mailto:devdyse@gmail.com",
       color: "text-secondary-400 hover:text-secondary-300"
     },
     {
@@ -95,7 +95,7 @@ const ContactSection = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:dysedev@gmail.com"
+                href="mailto:devdyse@gmail.com"
                 className="accent-button inline-flex items-center justify-center hover-scale"
               >
                 <Send className="w-5 h-5 mr-2" />

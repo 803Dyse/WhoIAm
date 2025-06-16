@@ -54,7 +54,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
         {/* CTA Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mb-12 animate-slide-up">
           <a 
-            href="mailto:dysedev@gmail.com" 
+            href="mailto:devdyse@gmail.com" 
             className="accent-button hover-scale"
           >
             Entre em Contato

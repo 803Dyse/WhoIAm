@@ -78,7 +78,7 @@ src/
 
 ### 🎯 **Informações Reais Incluídas**
 - Nome: Alejandro Martins
-- Email: dysedev@gmail.com
+- Email: devdyse@gmail.com
 - Localização: Galicia, España
 - GitHub: https://github.com/alejandromartins
 - LinkedIn: https://www.linkedin.com/in/alejandro-martins
